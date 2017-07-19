@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { up, down } from './actions'
+import { upAsync, down } from './actions'
 import PropTypes from 'prop-types'
-
-console.log(up, down)
 
 class ExamplePage extends Component{
   constructor(props){
@@ -11,11 +9,9 @@ class ExamplePage extends Component{
   }
 
   render(){
-    console.log(this.props)
     return (
       <div>
-        <h1>React/Redux starter project</h1>
-        <h5>{ this.props.counter }</h5>
+        <h3 className="counter-title">{ this.props.counter }</h3>
         <button onClick={ this.props.up }>+</button>
         <button onClick={ this.props.down }>-</button>
       </div>
@@ -31,7 +27,7 @@ function mapStateToProps(state){
 
 function mapDispatchToProps(dispatch){
   return {
-    up: () => { dispatch(up()) },
+    up: () => { dispatch(upAsync()) },
     down: () => { dispatch(down()) }
   }
 }

@@ -5,10 +5,10 @@ import Routes from './routes.js'
 
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux'
-import promise from 'redux-promise'
+import thunk from 'redux-thunk'
 import Reducers from './reducers.js'
 
-const createStoreWithMiddleware = applyMiddleware(promise)(createStore)
+const createStoreWithMiddleware = applyMiddleware(thunk)(createStore)
 
 ReactDOM.render(
   <Provider store={createStoreWithMiddleware(Reducers)}>
