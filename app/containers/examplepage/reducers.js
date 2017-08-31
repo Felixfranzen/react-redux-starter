@@ -6,7 +6,7 @@ export default function(count = 0, action){
       return count + 1
 
     case DOWN:
-      return count -1
+      return count - 1
 
     default:
       return count

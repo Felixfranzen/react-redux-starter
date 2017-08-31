@@ -6,8 +6,14 @@ export function up(){
 }
 
 export function upAsync(){
-  return dispatch => {
+  return (dispatch, getState) => {
     setTimeout(() => {
+
+      const { counter } = getState()
+      if (counter >= 5) {
+        return
+      }
+
       dispatch(up())
     }, 1000)
   }
