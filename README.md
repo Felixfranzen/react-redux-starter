@@ -9,7 +9,7 @@ Actions
 
 
 Project Structure
-
+```
 /app
 	/components
 		/button
@@ -32,6 +32,6 @@ Project Structure
 	index.js
 	rootReducer.js
 	router.js
-
+```
 Components = Reusable, stateless, generic, only have access to the supplied props
 Container = Static, stateful, specific, can get and update state. Used for the applications routing
