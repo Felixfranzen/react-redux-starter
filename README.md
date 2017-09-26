@@ -1,12 +1,12 @@
 Parts
-
+```
 Components
 Containers
 Router 
 Store
 Reducers
 Actions
-
+```
 
 Project Structure
 ```
