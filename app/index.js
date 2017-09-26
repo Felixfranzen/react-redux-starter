@@ -8,6 +8,8 @@ import { createStore, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
 import Reducers from './reducers.js'
 
+import styles from './main.scss'
+
 const createStoreWithMiddleware = applyMiddleware(thunk)(createStore)
 
 ReactDOM.render(

@@ -35,5 +35,10 @@
         ],
 
         "no-console": ["warn"]
+    },
+
+    "globals": {
+        "process": true,
+        "__dirname":true
     }
 }
