@@ -1,5 +1,3 @@
-var ExtractTextPlugin = require('extract-text-webpack-plugin')
-
 module.exports = {
   entry: './app/index.js',
   output: {
@@ -20,16 +18,10 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract('!css!sass')
+        loader: ['style', 'css', 'sass']
       }
     ]
   },
-
-  plugins: [
-    new ExtractTextPlugin('public/styles.css', {
-      allChunks: true
-    })
-  ],
 
   devServer: {
     historyApiFallback: true,
