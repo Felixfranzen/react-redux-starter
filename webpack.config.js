@@ -6,19 +6,19 @@ module.exports = {
   },
 
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js/,
         exclude: /node_modules/,
         include: __dirname + '/app',
-        loader: 'babel',
+        loader: 'babel-loader',
         query: {
           presets: ['react', 'es2015', 'stage-2']
         }
       },
       {
         test: /\.scss$/,
-        loaders: ['style', 'css', 'sass']
+        use: ['style-loader','css-loader','sass-loader']
       }
     ]
   },
